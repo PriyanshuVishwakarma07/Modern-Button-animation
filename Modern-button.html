@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mordern button</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .wrapper{
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .btn{
+            background-color: #e84949;
+            padding: 0.8rem 2.3rem;
+            border: none;
+            color: white;
+            font-size: 18px;
+            box-shadow: 5px 5px 9px  black;
+            position: relative;
+            z-index: 1;
+        }
+        .btn::before{
+            content: "";
+            background-color: black;
+            position: absolute;
+            top:0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            transform: scaleX(0);
+            transform-origin: left;
+            z-index: -1;
+        }
+        .btn:hover::before{
+            transform: scaleX(1);
+            transition: 0.8s;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <button class="btn">Hire me</button>
+    </div>
+</body>
+</html>
